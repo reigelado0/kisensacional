@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="./header.css">
-    <link rel="stylesheet" href="./home.css">
-    <link rel="stylesheet" href="./menu.css">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./testimonials.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-is/18.3.1/cjs/react-is.production.min.js" integrity="sha512-7tmQCIngBCyNlDtDg31ZalbtoWQbMtqK+8Yo2Vgk6DFbC4YTFfqmLzuSwYWqMnmpmuwZBMlp/POm8ES1PHUwcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/testimonials.css">
+    <link rel="stylesheet" href="./css/carrinho.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
- 
-
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Landing page</title>
 </head>
@@ -24,12 +18,9 @@
     <header>
         <nav id="navbar">
             <div class="nav-logo">
-                <img src="./logotipos.png" alt="" width="80px">
+                <img src="./logotipos.png" alt="Logo da KiSensacional" width="80px">
                 <h1>KiSensacional</h1>
             </div>
-           
-           
-
             <ul id="nav_list">
                 <li class="nav-item active">
                     <a href="#home">Início</a>
@@ -41,11 +32,18 @@
                     <a href="#testimonials">Avaliações</a>
                 </li>
             </ul>
-
-            <button class="btn-default">
-                Peça aqui
-            </button>
-
+            <nav class="flex-nav">
+                <ul>
+                    <li class="contato">
+                        <a href="#" id="cart-link" class="cart-link">
+                            <img src="./img/carrinho-de-compras (2).png" alt="Carrinho de compras" class="img_car">
+                        </a>
+                    </li>
+                    <li class="contato">
+                        <a href="./login.html" class="login-link">Iniciar sessão</a>
+                    </li>
+                </ul>
+            </nav>
             <button id="mobile_btn">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -63,10 +61,6 @@
                     <a href="#testimonials">Avaliações</a>
                 </li>
             </ul>
-
-            <button class="btn-default">
-                Peça aqui
-            </button>
         </div>
     </header>
 
@@ -78,65 +72,47 @@
                     O sabor que vai até
                     <span>você</span>
                 </h1>
-
                 <p class="description">
                     Lorem ipsum dolor sit amet, consectetur 
                     adipiscing elit ut aliquam, purus sit amet
                 </p>
-
                 <div id="cta_buttons">
                     <a href="#" class="btn-default">
                         Ver cardápio
                     </a>
-
-                    <a href="tel:+55555555555" id="phone_button">
-                        <button class="btn-default">
-                            <i class="fa-solid fa-phone"></i>
-                        </button>
-                        (51) 92342-3243
+                    <a href="tel:+55555555555" id="phone_button" class="btn-default">
+                        <i class="fa-solid fa-phone"></i> (51) 92342-3243
                     </a>
                 </div>
-
                 <div class="social-media-buttons">
-                    <a href="">
+                    <a href="https://api.whatsapp.com/send?phone=seunumerodetelefone" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
-
-                    <a href="">
+                    <a href="https://instagram.com/seuperfil" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-
-                    <a href="">
+                    <a href="https://facebook.com/seuperfil" target="_blank">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
                 </div>
             </div>
 
             <div id="banner">
-                <img src="./bolo.menu.png" alt="">
+                <img src="./bolo.menu.png" alt="Imagem do cardápio">
             </div>
         </section>
 
         <section id="menu">
             <h2 class="section-title">Cardápio</h2>
             <h3 class="section-subtitle">Nossos pratos especiais</h3>
-
             <div id="dishes">
                 <div class="dish">
                     <div class="dish-heart">
                         <i class="fa-solid fa-heart"></i>
                     </div>
-
-                    <img src="./img.bolo/blo 1.avif" class="dish-image" alt="">
-
-                    <h3 class="dish-title">
-                        Lorem Ipsum
-                    </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
+                    <img src="./img.bolo/blo 1.avif" class="dish-image" alt="Bolo 1">
+                    <h3 class="dish-title">Lorem Ipsum</h3>
+                    <span class="dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                     <div class="dish-rate">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -145,10 +121,9 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(500+)</span>
                     </div>
-
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" data-product="Lorem Ipsum" data-price="20.00" data-image="./img.bolo/blo 1.avif">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
@@ -158,17 +133,9 @@
                     <div class="dish-heart">
                         <i class="fa-solid fa-heart"></i>
                     </div>
-
-                    <img src="./img.bolo/blo 1.avif" class="dish-image" alt="">
-
-                    <h3 class="dish-title">
-                        Lorem Ipsum
-                    </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
+                    <img src="./img.bolo/blo 1.avif" class="dish-image" alt="Bolo 1">
+                    <h3 class="dish-title">Lorem Ipsum</h3>
+                    <span class="dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                     <div class="dish-rate">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -177,96 +144,26 @@
                         <i class="fa-solid fa-star"></i>
                         <span>(500+)</span>
                     </div>
-
                     <div class="dish-price">
                         <h4>R$20,00</h4>
-                        <button class="btn-default">
+                        <button class="btn-default" data-product="Lorem Ipsum" data-price="20.00" data-image="./img.bolo/blo 1.avif">
                             <i class="fa-solid fa-basket-shopping"></i>
                         </button>
                     </div>
                 </div>
 
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="./img.bolo/blo 1.avif" class="dish-image" alt="">
-
-                    <h3 class="dish-title">
-                        Lorem Ipsum
-                    </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4>R$20,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="./img.bolo/blo 1.avif" class="dish-image" alt="">
-
-                    <h3 class="dish-title">
-                        Lorem Ipsum
-                    </h3>
-
-                    <span class="dish-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <h4>R$20,00</h4>
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
+                <!-- Adicione mais pratos conforme necessário -->
             </div>
         </section>
 
         <section id="testimonials">
-            <img src="./imagens/chef.png" id="testimonial_chef" alt="">
-
+            <img src="./imagens/chef.png" id="testimonial_chef" alt="Chef do restaurante">
             <div id="testimonials_content">
-                <h2 class="section-title">
-                    Feedback
-                </h2>
-                <h3 class="section-subtitle">
-                    O que os clientes falam sobre nós
-                </h3>
-
+                <h2 class="section-title">Feedback</h2>
+                <h3 class="section-subtitle">O que os clientes falam sobre nós</h3>
                 <div id="feedbacks">
                     <div class="feedback">
-                        <img src="./imagens/avatar.png" class="feedback-avatar" alt="">
-
+                        <img src="./imagens/avatar.png" class="feedback-avatar" alt="Avatar de Fulana de Tal">
                         <div class="feedback-content">
                             <p>
                                 Fulana de Tal
@@ -286,8 +183,7 @@
                     </div>
 
                     <div class="feedback">
-                        <img src="./imagens/avatar.png" class="feedback-avatar" alt="">
-
+                        <img src="./imagens/avatar.png" class="feedback-avatar" alt="Avatar de Fulana de Tal">
                         <div class="feedback-content">
                             <p>
                                 Fulana de Tal
@@ -307,36 +203,37 @@
                     </div>
                 </div>
 
-                <button class="btn-default">
-                    Ver mais avaliações
-                </button>
+                <button class="btn-default">Ver mais avaliações</button>
             </div>
         </section>
     </main>
 
+    <div id="cart-panel" class="cart-panel">
+        <button id="closebtn" class="close-btn">X</button>
+        <h2>Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: R$ 0.00</p>
+        <button id="checkout-btn" class="checkout-btn">Finalizar Compra</button>
+    </div>
+
     <footer>
-        <img src="./imagens/wave.svg" alt="">
-
+        <img src="./imagens/wave.svg" alt="Decoração de onda">
         <div id="footer_items">
-            <span id="copyright">
-                &copy 2024 Larissa Kich
-            </span>
-
-            <div class="social-media-buttons">
-                <a href="">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
+            &copy; 2024 Larissa Kich
+        </div>
+        <div class="social-media-buttons">
+            <a href="https://api.whatsapp.com/send?phone=seunumerodetelefone" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/seuperfil" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/seuperfil" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
         </div>
     </footer>
-    <script src="./script.js"></script>
+
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

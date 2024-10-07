@@ -15,6 +15,16 @@ header {
     justify-content: space-between;
 }
 
+#navbar ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove o margin padrão */
+}
+
+#navbar li {
+    display: inline; /* Para exibir os itens da lista em linha */
+}
+
 .nav-logo {
     display: flex;
     align-items: center;
@@ -41,6 +51,11 @@ header {
 .nav-item.active a {
     color: var(--color-neutral-1);
     border-bottom: 3px solid var(--color-primary-4);
+}
+
+.img_car {
+    height: 45px;
+    width: 45px;
 }
 
 #mobile_btn {
@@ -82,4 +97,6 @@ header {
         list-style: none;
         text-align: center;
     } 
+  
+     
 }
